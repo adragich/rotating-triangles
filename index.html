@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom animations</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="n-anim black full-height" id="app">
+        <div class="container">
+            <div class="n-triangles">
+                <p class="n-title">Rotating triangles</p>
+                <div class="n-demo-block">
+                    <div class="n-triangle"
+                         v-bind:class="{ 'active': !!triangle.active}"
+                         v-on:click="setTriangle(triangle);"
+                         v-if="triangles.length > 0"
+                         v-for="triangle in triangles">
+                        <img v-bind:src="triangle.image" alt="Triangle Image">
+                        <div class="n-cut black-shadow">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/n-scripts.js"></script>
+
+</body>
+</html>
